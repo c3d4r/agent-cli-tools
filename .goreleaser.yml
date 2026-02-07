@@ -1,0 +1,49 @@
+version: 2
+
+builds:
+  - id: e
+    main: ./cmd/e/
+    binary: e
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+
+  - id: lsp-cli
+    main: ./cmd/lsp-cli/
+    binary: lsp-cli
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - id: e
+    builds:
+      - e
+    name_template: "e_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format: tar.gz
+
+  - id: lsp-cli
+    builds:
+      - lsp-cli
+    name_template: "lsp-cli_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format: tar.gz
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  sort: asc
