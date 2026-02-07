@@ -7,7 +7,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/c3d4r/cli-lsp-mcp/internal/lsp"
+	"github.com/c3d4r/agent-cli-tools/internal/lsp"
 )
 
 // Formatter controls how results are displayed.

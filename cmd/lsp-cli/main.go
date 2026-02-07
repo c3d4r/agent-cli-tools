@@ -24,9 +24,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/c3d4r/cli-lsp-mcp/internal/config"
-	"github.com/c3d4r/cli-lsp-mcp/internal/lsp"
-	"github.com/c3d4r/cli-lsp-mcp/internal/output"
+	"github.com/c3d4r/agent-cli-tools/internal/config"
+	"github.com/c3d4r/agent-cli-tools/internal/lsp"
+	"github.com/c3d4r/agent-cli-tools/internal/output"
 )
 
 var (
